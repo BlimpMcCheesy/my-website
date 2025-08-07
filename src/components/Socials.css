@@ -1,0 +1,21 @@
+/* src/components/Socials.css */
+.socials-container {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-button {
+  background-color: #f0f0f0; /* MODIFIED: Same light gray as header */
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-button:hover {
+  background-color: #000;
+  color: #fff;
+}

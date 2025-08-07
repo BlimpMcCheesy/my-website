@@ -1,0 +1,30 @@
+/* Contact.css */
+
+.contact-container {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  min-height: calc(100vh - 80px); /* match your header height */
+  width: 100vw; /* FULL width of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contact-title {
+  color: #ff4500;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.contact-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
