@@ -1,7 +1,5 @@
 /* Home.css */
 
-/* Home.css */
-
 .home-container {
   background-color: #1a1a1a;
   color: #e0e0e0;
@@ -30,18 +28,3 @@
   max-width: 800px;
 }
 
-
-
-.home-title {
-  color: #ff4500; /* Orange-red */
-  font-size: 3em;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
-.home-description {
-  font-size: 1.2em;
-  line-height: 1.6;
-  max-width: 800px;
-}
