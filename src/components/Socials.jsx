@@ -1,26 +1,16 @@
-// src/components/Socials.jsx
 import React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import './Socials.css';
-
-const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/BlimpMcCheesy' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/kyle-whitman1' },
-];
 
 function Socials() {
   return (
     <div className="socials-container">
-      {socialLinks.map(social => (
-        <a 
-          key={social.name} 
-          href={social.url}
-          className="social-button"
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          {social.name}
-        </a>
-      ))}
+      <a href="https://github.com/BlimpMcheesy" className="social-button" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <FaGithub size={24} />
+      </a>
+      <a href="https://linkedin.com/in/kyle-whitman1" className="social-button" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <FaLinkedin size={24} />
+      </a>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 /* src/App.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 /* --- Base & Reset --- */
 body, html {
   margin: 0;
@@ -20,7 +22,7 @@ body, html {
 .App-header {
   background-color: #f0f0f0;
   padding: 1rem 0;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
@@ -54,6 +56,11 @@ body, html {
   height: 40px;
   width: auto;
   display: block;
+} 
+
+.nav-logo:hover {
+  transform: scale(1.05); /* grow bigger */
+  filter: drop-shadow(0 0 1px #eaeaea); /* subtle black glow/shadow */
 }
 
 .nav-center {
@@ -109,34 +116,226 @@ body, html {
   flex-shrink: 0;
 }
 
-/* Responsive */
+/* Responsive Header*/
 @media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
-    align-items: center;
+  .App-header {
+    padding: 0.25rem 0;
   }
 
-  .nav-center {
-    order: 2;
-    justify-content: center;
+  .navbar {
+    display: flex;
+    flex-direction: row;  /* inline, side-by-side */
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    align-items: center; /* vertically center */
+    justify-content: center; /* center content horizontally */
+    flex-wrap: wrap; /* allow wrapping on very small screens */
   }
 
   .nav-logo {
     order: 1;
   }
 
-  .socials-container {
-    order: 3;
+  .nav-logo-img {
+    height: 24px;
+  }
+
+  .nav-center {
+    order: 2;
+    display: flex;           /* make links a flex container */
+    flex-direction: row;     /* links inline */
+    gap: 0.75rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 1rem;
+    display: flex;           /* ensure links are inline */
+    flex-direction: row;
+    gap: 0.75rem;
     align-items: center;
-    text-align: center;
     margin-left: 0;
   }
+
+  .socials-container {
+    display: none;
+  }
 }
+
+
+
+/* Footer styling */
+.App-footer {
+  background-color: #1a1a1a; /* dark background */
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-navbar {
+  width: 100%;
+  max-width: none;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.footer-nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-page-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Underline with white line */
+.footer-nav-page-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background-color: #fff; /* white underline */
+  transition: transform 0.3s ease-out;
+}
+
+/* On hover: white background, black text, underline disappears */
+.footer-nav-page-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-nav-page-link:hover::after {
+  transform: translateX(-50%) scaleX(0);
+}
+
+/* Socials adapted for dark footer */
+.footer-navbar .socials-container .social-button {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-navbar .socials-container .social-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-name {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem; /* bigger */
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    padding-left: 1rem;
+    user-select: none;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); /* subtle shadow for depth */
+}
+
+.footer-name-link {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: 
+    color 0.3s ease, 
+    font-size 0.3s ease, 
+    text-shadow 0.3s ease;
+  user-select: none;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.footer-name-link:hover {
+  color: #000;
+  font-size: 1.83rem;
+  /* white outline effect */
+  text-shadow: 
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  cursor: pointer;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;          /* slightly tighter gap */
+    padding: 0.75rem 1rem; /* a bit less padding */
+    min-height: 160px;     /* reduce height a bit */
+  }
+
+  .footer-name {
+    order: 1;
+    align-self: center;
+    font-size: 1rem;       /* smaller font size */
+  }
+
+  .footer-nav-center {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;             /* reduce gap between links */
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;     /* scale down link font size */
+  }
+
+  .footer-socials-container {
+    order: 3;
+    margin-top: 1rem;      /* add space above socials */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Optionally, scale down social icons inside footer-socials-container */
+  .footer-socials-container svg, 
+  .footer-socials-container img {
+    height: 20px;          /* smaller icon size */
+    width: 20px;
+    margin: 0 0.4rem;     /* spacing between icons */
+  }
+}
+
+
+
+
+
+

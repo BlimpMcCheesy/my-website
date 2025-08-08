@@ -1,11 +1,21 @@
 import React from 'react';
-import './Home.css'; // Import the CSS file
+import './Home.css';
+import meImage from '../assets/me.png';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <h1 className="home-title">Home Page</h1>
-      <p className="home-description">Welcome to my personal portfolio.</p>
+      <div className="home-content">
+        <img src={meImage} alt="Kyle Whitman" className="home-image" />
+        <div className="home-text">
+          <h1 className="home-title">Hi, I'm Kyle Whitman</h1>
+          <p className="home-intro">
+            Welcome to my personal portfolio! I’m a passionate developer dedicated to crafting
+            beautiful, functional web experiences. Here you'll find some of my projects, skills,
+            and more about me.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

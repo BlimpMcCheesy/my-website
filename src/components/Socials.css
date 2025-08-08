@@ -18,4 +18,5 @@
 .social-button:hover {
   background-color: #000;
   color: #fff;
+  transform: scale(1.05);
 }
