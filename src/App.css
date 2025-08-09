@@ -61,6 +61,7 @@ body, html {
 .nav-logo:hover {
   transform: scale(1.05); /* grow bigger */
   filter: drop-shadow(0 0 1px #eaeaea); /* subtle black glow/shadow */
+  box-shadow: 0 0 10px 3px rgba(115, 115, 115, 0.5)
 }
 
 .nav-center {
@@ -79,7 +80,7 @@ body, html {
 }
 
 .nav-page-link {
-  color: #000;
+  color: #000000;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
@@ -97,13 +98,15 @@ body, html {
   transform: translateX(-50%);
   width: 80%;
   height: 3px;
-  background-color: #ff4500;
+  background-color: #000000;
   transition: transform 0.3s ease-out;
 }
 
 .nav-page-link:hover {
-  background-color: #ff4500;
+  background-color: #000000;
   color: #fff;
+  box-shadow: 0 0 10px 3px rgba(115, 115, 115, 0.7);
+  font-size: 1.12rem;
 }
 
 .nav-page-link:hover::after {
@@ -226,6 +229,8 @@ body, html {
 .footer-nav-page-link:hover {
   background-color: #fff;
   color: #000;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3);
+  font-size: 1.02rem;
 }
 
 .footer-nav-page-link:hover::after {
@@ -281,7 +286,10 @@ body, html {
     -1px -1px 0 #fff,  
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
-    1px 1px 0 #fff;
+    1px 1px 0 #fff,
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.3);
+
   cursor: pointer;
 }
 

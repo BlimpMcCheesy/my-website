@@ -7,11 +7,13 @@ import Contact from './components/Contact';
 import Socials from './components/Socials';
 import KLogo from './assets/K.png';
 import FooterSocials from './components/FooterSocials';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <header className="App-header">
           <nav className="navbar">

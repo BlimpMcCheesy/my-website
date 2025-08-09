@@ -20,4 +20,5 @@
   background-color: #fff;
   color: #000;
   transform: scale(1.05);
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3)
 }
