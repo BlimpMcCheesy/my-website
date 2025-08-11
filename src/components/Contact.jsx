@@ -33,7 +33,7 @@ const Contact = () => {
       <p className="contact-paragraph">
         Looking for new projects or collaborations? Feel free to get in touch! Whether you have a question, want to discuss a potential partnership, or need help with a project, I’m always open to exciting work opportunities. Let’s connect and create something great together.
       </p>
-      <p className="contact-description">You can reach me at <a href="mailto:kyleman38@gmail.com" className="contact-email">kyleman38@gmail.com</a></p>
+      <p className="contact-description">You can reach me at <a href="mailto:kw.kylewhitman@gmail.com" className="contact-email">kw.kylewhitman@gmail.com</a></p>
 
       {!submitted ? (
         <form className="contact-form" onSubmit={handleSubmit}>
