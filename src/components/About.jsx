@@ -1,11 +1,11 @@
 import React from 'react';
 import './About.css';
-import aboutImg from '../assets/about.png';
-import mooseImg from '../assets/moose.png';
-import bikeIcon from '../assets/bike.png';
-import runIcon from '../assets/run.png';
-import musicIcon from '../assets/music.png';
-import gamesIcon from '../assets/games.png';
+import aboutImg from '../assets/about.webp';
+import mooseImg from '../assets/moose.webp';
+import bikeIcon from '../assets/bike.webp';
+import runIcon from '../assets/run.webp';
+import musicIcon from '../assets/music.webp';
+import gamesIcon from '../assets/games.webp';
 import SpotifyCard from './Spotify';
 import StravaCard from './Strava';
 

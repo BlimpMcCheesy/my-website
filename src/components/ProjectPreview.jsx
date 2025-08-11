@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectPreview.css';
-import chessImage from '../assets/chess.png';
-import blackjackImage from '../assets/blackjack.png';
-import mywebsiteImage from '../assets/mywebsite.png';
+import chessImage from '../assets/chess.webp';
+import blackjackImage from '../assets/blackjack.webp';
+import mywebsiteImage from '../assets/mywebsite.webp';
 
 const ProjectPreview = () => {
   // A smaller, curated list of projects for the home page

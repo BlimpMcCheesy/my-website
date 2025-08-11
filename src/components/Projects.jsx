@@ -1,14 +1,14 @@
 import React from 'react';
 import './Projects.css';
-import chessImage from '../assets/chess.png';
-import blackjackImage from '../assets/blackjack.png';
-import mywebsiteImage from '../assets/mywebsite.png';
-import workImage from '../assets/work.png';
-import fuguImage from '../assets/fugu.png';
-import ucfImage from '../assets/ucf.png';
-import codeImage from '../assets/code.png';
-import pcImage from '../assets/pc.png';
-import vmImage from '../assets/vm.png';
+import chessImage from '../assets/chess.webp';
+import blackjackImage from '../assets/blackjack.webp';
+import mywebsiteImage from '../assets/mywebsite.webp';
+import workImage from '../assets/work.webp';
+import fuguImage from '../assets/fugu.webp';
+import ucfImage from '../assets/ucf.webp';
+import codeImage from '../assets/code.webp';
+import pcImage from '../assets/pc.webp';
+import vmImage from '../assets/vm.webp';
 
 const Projects = () => {
   // Placeholder data for projects

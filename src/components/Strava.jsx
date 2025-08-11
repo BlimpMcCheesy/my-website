@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Strava.css';
+import defaultImg from '../assets/me.webp';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function StravaCard() {
   const [profile, setProfile] = useState(null);
@@ -42,11 +45,26 @@ export default function StravaCard() {
       <h3 className="strava-title">Strava</h3>
       <p>Have a Strava profile? Connect with me below.</p>
       <div className="strava-widget">
-        <img
-          src={profile.profile_medium}
-          alt={`${profile.firstname} ${profile.lastname}`}
-          className="strava-profile-pic"
-        />
+        {profile?.profile_medium ? (
+          <LazyLoadImage
+            src={profile.profile_medium}
+            alt={`${profile.firstname || ''} ${profile.lastname || ''}`}
+            className="strava-profile-pic"
+            effect="blur"
+            placeholderSrc={defaultImg}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = defaultImg;
+            }}
+          />
+        ) : (
+          <img
+            src={defaultImg}
+            alt={`${profile?.firstname || ''} ${profile?.lastname || ''}`}
+            className="strava-profile-pic"
+          />
+        )}
+
 
         <div className="strava-name">
             <a

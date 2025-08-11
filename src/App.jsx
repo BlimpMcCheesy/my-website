@@ -5,7 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Socials from './components/Socials';
-import KLogo from './assets/K.png';
+import KLogo from './assets/K.webp';
 import FooterSocials from './components/FooterSocials';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';

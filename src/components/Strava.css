@@ -108,3 +108,11 @@
   text-decoration: underline;
   color: #000000;
 }
+
+@media (max-width: 768px) {
+
+  .strava-widget{
+    max-width: 80%; /* allow it to shrink nicely */
+    margin: 0 auto;
+  }
+}

@@ -1,15 +1,17 @@
 import React from 'react';
 import './Home.css';
-import meImage from '../assets/me.png';
+import meImage from '../assets/me.webp';
 import ProjectPreview from './ProjectPreview';
 import { Link } from 'react-router-dom'; // assuming you use react-router
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Home = () => {
   return (
     <>
       <div className="home-container">
         <div className="home-content">
-          <img src={meImage} alt="Kyle Whitman" className="home-image" />
+          <LazyLoadImage src={meImage} alt="Kyle Whitman" className="home-image" effect="blur" />
           <div className="home-text">
             <h1 className="home-title">Hi, I'm Kyle Whitman</h1>
             <p className="home-intro">

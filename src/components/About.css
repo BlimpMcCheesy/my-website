@@ -211,24 +211,52 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 2rem; /* less space so it looks tighter */
+  }
+
+  .about-main-img-container {
+    max-width: 90%; /* allow it to shrink nicely */
+    margin: 0 auto;
+  }
+
+  .about-main-img {
+    max-width: 100%;
+    height: auto;
   }
 
   .about-intro {
+    flex: unset;
+    max-width: 90%;
     text-align: center;
+  }
+
+  .about-description {
+    max-width: 600px; /* keeps text from getting too wide */
+    margin: 0 auto;
   }
 
   .about-icons {
     justify-content: center;
+    padding-left: 0;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 
   .moose-section {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
 
   .moose-large-img {
-    width: 140px;
-    height: 140px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+  }
+
+  .preview-card {
+    flex: 1 1 100%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
