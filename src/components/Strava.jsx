@@ -12,10 +12,10 @@ export default function StravaCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const profileRes = await fetch('/strava/profile');
+        const profileRes = await fetch('https://api.kylewhitman.app/strava/profile');
         const profileData = await profileRes.json();
 
-        const statsRes = await fetch('/strava/stats');
+        const statsRes = await fetch('https://api.kylewhitman.app/strava/stats');
         const statsData = await statsRes.json();
 
         setProfile(profileData);
